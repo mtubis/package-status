@@ -16,6 +16,22 @@ To install the library, use Composer:
 composer require mtubis/package-status
 ```
 
+or copy the code and config your composer.json e.g.
+
+```php
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/",
+            "MTubis\\PackageStatus\\": "src/MTubis/PackageStatus/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "App\\Tests\\": "tests/"
+        }
+    },
+```
+
 Make sure you have Composer installed. If not, follow the instructions [here](https://getcomposer.org/).
 
 ## Usage
