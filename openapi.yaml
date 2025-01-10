@@ -1,0 +1,23 @@
+openapi: 3.0.1
+info:
+  title: Order Notification API
+  version: 1.0.0
+paths:
+  /api/notifications:
+    post:
+      summary: Send notification
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                order_id:
+                  type: string
+                new_status:
+                  type: string
+                phone:
+                  type: string
+      responses:
+        200:
+          description: Notification sent successfully
